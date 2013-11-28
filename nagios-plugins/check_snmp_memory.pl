@@ -72,12 +72,15 @@ sub do_snmp {
 	}
 
 	my $type;
+	
+	my $unit;
 
 	my ($jnk, $x) = split / = /, $out, 2;
 
-	if ($x =~ /([a-zA-Z0-9]+): (.*)$/) {
+	if ($x =~ /([a-zA-Z0-9]+): ([0-9]*)(.*)$/) {
 		$type = $1;
 		$x = $2;
+		$unit = $3;
 	}
 
 	return $x;
