@@ -33,7 +33,7 @@ if (!$getopt) {
 my $rpm_pkg = $ARGV[0];
 
 if (!$rpm_pkg) {
-	&usage("You must specify an rpm pacakge");
+	&usage("You must specify an rpm package");
 }
 
 my $rpm_cmd;
